@@ -35,7 +35,7 @@ def plot_response(f):
     input_signal = np.sin(2 * pi * f * t)
     response = np.convolve(y_unit_imp_response, input_signal)
     axs[1].plot(t, response[0:1334])
-    axs[1].set(xlabel="$time/ s$", ylabel="$Y/X$")
+    axs[1].set(xlabel="$time/ s$", ylabel="$Y$")
     axs[1].set_title(f"Response to input signal")
 
 
