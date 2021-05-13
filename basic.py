@@ -24,7 +24,7 @@ fig, axs = plt.subplots(2, 1, figsize=(
 axs[0].plot(t, input_signal)
 axs[0].set(xlabel="$time/ s$", ylabel="$X$")
 axs[0].set_title(f"Input signal with $f={f_signal}Hz$")
-axs[1].plot(t, response[0:1334])
+axs[1].plot(t, response[0:len(t)])
 axs[1].set(xlabel="$time/ s$", ylabel="$Y$")
 axs[1].set_title(f"Response to input signal")
 plt.tight_layout()

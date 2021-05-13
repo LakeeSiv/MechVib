@@ -34,7 +34,7 @@ def plot_input(f):
 def plot_response(f):
     input_signal = np.sin(2 * pi * f * t)
     response = np.convolve(y_unit_imp_response, input_signal)
-    axs[1].plot(t, response[0:1334])
+    axs[1].plot(t, response[0:len(t)])
     axs[1].set(xlabel="$time/ s$", ylabel="$Y$")
     axs[1].set_title(f"Response to input signal")
 
@@ -42,7 +42,7 @@ def plot_response(f):
 plot_input(init_f_signal)
 plot_response(init_f_signal)
 
-axfreq = plt.axes([0.25, .95, 0.65, 0.03])
+axfreq = plt.axes([0.2, .95, 0.65, 0.03])
 freq_slider = Slider(
     ax=axfreq,
     label='Input Frequency/Hz',
