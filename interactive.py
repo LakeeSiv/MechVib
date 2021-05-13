@@ -1,3 +1,6 @@
+# note: this is defo not the most efficent way to make
+# and interactive graph, its just a quick solution
+
 from math import pi
 import numpy as np
 import matplotlib.pyplot as plt
