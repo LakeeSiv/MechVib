@@ -8,14 +8,14 @@ f_signal = 80  # Hz
 
 # Constants
 f_n = 100  # Hz
-w_n = 2*pi*f_n  # rad s^-1
+w_n = 2 * pi * f_n  # rad s^-1
 zeta = 0.03
 T = 0.4
 delta_t = 0.0003
 
 t = np.arange(0, T, delta_t)
-y_unit_imp_response = np.exp(-1*zeta*w_n*t)*np.sin(w_n*t)
-input_signal = np.sin(2*pi*f_signal*t)
+y_unit_imp_response = np.exp(-1 * zeta * w_n * t) * np.sin(w_n * t)
+input_signal = np.sin(2 * pi * f_signal * t)
 response = np.convolve(y_unit_imp_response, input_signal)
 
 plt.style.use("seaborn")
