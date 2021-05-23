@@ -13,7 +13,7 @@ There are two files:
 ## Clone the repo
 
 ```
-git clone https://github.com/LakeeSiv/MechVibEP2Q10.git
+git clone https://github.com/LakeeSiv/MechVib.git
 ```
 
 ## Install Dependencies
