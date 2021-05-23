@@ -1,0 +1,29 @@
+import numpy as np
+from numpy.linalg import eig, inv
+
+K = np.array([[2, -1],
+              [-1, 3]])
+
+M = np.array([[1, 0],
+              [0, 2]])
+
+# A*Y = w^2*Y where A = M^-1*K
+A = np.matmul(inv(M), K)
+
+w, v = eig(A)
+"""
+w: vector containing eigenvals
+v: matrix containing **normalized** eigenvectors
+"""
+
+for i in range(2):
+    w_sq = w[i]
+    e_vec = v[:, i]
+
+    # unnormalize the vector
+    u_e_vec = e_vec / e_vec[0]
+
+    print(f"""
+    Mode {i+1}: eigenfreq squared = {w_sq} rad^2/s^2
+            mode shape = {u_e_vec}
+    """)
