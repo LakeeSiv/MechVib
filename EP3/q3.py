@@ -15,8 +15,7 @@ w, v = eig(A)
 w: vector containing eigenvals
 v: matrix containing **normalized** eigenvectors
 """
-
-for i in range(2):
+for i in range(w.size):
     w_sq = w[i]
     e_vec = v[:, i]
 
